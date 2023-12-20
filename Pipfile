@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+kaggathon = {editable = true, path = "."}
+streamlit = "*"
+argon2-cffi = "*"
+pandas = "*"
+bokeh = "*"
+numpy = "*"
+scikit-learn = "*"
+isort = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
