@@ -12,10 +12,15 @@ class Leaderboard:
     def __init__(self, submission_manager, evaluator) -> None:
         self.submission_manager = submission_manager
         self.evaluator = evaluator
+        self.id = None
 
-    @st.cache(
-        hash_funcs={SingleParticipantSubmissions: lambda x: x.submissions_hash()},
+    @st.cache_data(
+        hash_funcs={
+            SingleParticipantSubmissions: lambda x: x.submissions_hash(),
+            "kaggathon.display.leaderboard.Leaderboard": lambda x: hash(x.id),
+            },
         show_spinner=False,
+        persist=True,
     )
     def _get_sorted_leaderboard(
         self,
@@ -42,6 +47,7 @@ class Leaderboard:
             ],
             columns=["Participant Name", "Submission Time", *metric_names],
         )
+        print(leaderboard)
         leaderboard = leaderboard.sort_values(
             by=metric_names + ["Submission Time"],
             ascending=[False] * len(metric_names) + [True],

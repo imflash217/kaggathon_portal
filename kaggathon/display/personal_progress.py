@@ -27,11 +27,15 @@ class PersonalProgress:
         else:
             st.bokeh_chart(bokeh_plot, use_container_width=True)
 
-    @st.cache(
-        hash_funcs={SingleParticipantSubmissions: lambda x: x.submissions_hash()},
-        allow_output_mutation=True,
-        show_spinner=False,
-    )
+    # @st.cache_data(
+    #     hash_funcs={
+    #         SingleParticipantSubmissions: lambda x: x.submissions_hash(),
+    #         "kaggathon.display.personal_progress.PersonalProgress": lambda x: x.submission_name_column,
+    #     },
+    #     # allow_output_mutation=True,
+    #     show_spinner=False,
+    #     persist=True,
+    # )
     def _get_bokeh_progress_plot(self):
         self.participant_submissions.update_results(evaluator=self.evaluator)
 

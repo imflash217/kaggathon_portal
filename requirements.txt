@@ -1,7 +1,7 @@
 streamlit
 argon2-cffi
 pandas
-bokeh
 numpy
 scikit-learn
 isort
+bokeh>=2.1.1

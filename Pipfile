@@ -8,7 +8,7 @@ kaggathon = {editable = true, path = "."}
 streamlit = "*"
 argon2-cffi = "*"
 pandas = "*"
-bokeh = "*"
+bokeh = ">=2.1.1"
 numpy = "*"
 scikit-learn = "*"
 isort = "*"
