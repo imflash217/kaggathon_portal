@@ -17,13 +17,13 @@ from kaggathon.submissions.submissions_manager import SubmissionManager
 
 leaderboard_placeholder = st.empty()
 progress_placeholder = st.empty()
-max_width_value = st.sidebar.slider(
-    "Select max-width in px",
-    100,
-    2000,
-    1200,
-    100,
-)
+# max_width_value = st.sidebar.slider(
+#     "Select max-width in px",
+#     100,
+#     2000,
+#     1200,
+#     100,
+# )
 
 
 def get_login():

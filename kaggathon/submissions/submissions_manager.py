@@ -19,7 +19,7 @@ class SingleParticipantSubmissions:
         self.results: Dict[Path : Tuple[Metric, ...]] = dict()
 
     def _create_participant_dir(self):
-        self.participant_submission_dir.makdir(parent=True, exist_ok=True)
+        self.participant_submission_dir.mkdir(parents=True, exist_ok=True)
 
     def get_submissions(self):
         """Returns all submissions of every participant"""

@@ -25,7 +25,7 @@ class Leaderboard:
         for participant in participants_dict.values():
             participant.update_results(self.evaluator)
 
-        metric_names = [metric.name() for metric in self.evaluator.metrics]
+        metric_names = [metric.name() for metric in self.evaluator.metrics()]
 
         # leaderboard as a pandas dataframe
         leaderboard = pd.DataFrame(

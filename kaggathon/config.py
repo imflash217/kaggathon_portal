@@ -1,4 +1,6 @@
 from pathlib import Path
+from kaggathon.examples.dummy_metrics_evaluator import ExampleEvaluator
+
 
 # the directory in which user's submission will be saved
 SUBMISSIONS_DIR = Path(__file__).parent.parent.absolute() / "user_submissions"
@@ -15,11 +17,11 @@ MAX_NUM_USERS = None
 
 # the file extension used for submission
 # if None, any file extension is allowed.
-VALID_SUBMISSION_FILE_EXTENSION = None  # "json"
+VALID_SUBMISSION_FILE_EXTENSION = "json"
 
 SHOW_TOP_K_ONLY = 10
 ADMIN_USERNAME = "admin"
 
 # evaluation criteria and metrics
-EVALUATOR_CLASS = None
-EVALUATOR_KWARGS = None
+EVALUATOR_CLASS = ExampleEvaluator
+EVALUATOR_KWARGS = {}
