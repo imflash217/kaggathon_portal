@@ -62,6 +62,7 @@ class Leaderboard:
         leaderboard = self._get_sorted_leaderboard(
             self.submission_manager.participants, username
         )
+
         if leaderboard_placeholder is not None:
             leaderboard_placeholder.dataframe(leaderboard, use_container_width=True)
         else:

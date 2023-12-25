@@ -14,10 +14,7 @@ from kaggathon.login.username_password_manager import \
     UsernamePasswordManagerArgon2
 from kaggathon.submissions.submission_sidebar import SubmissionSidebar
 from kaggathon.submissions.submissions_manager import SubmissionManager
-
-st.markdown("## Leaderboard")
-leaderboard_placeholder = st.empty()
-progress_placeholder = st.empty()
+# import kaggathon.display.custom_css as cc
 
 
 def get_login():
@@ -77,6 +74,18 @@ def display_user_progess_for_admin():
         get_personal_progress(selected_user).show_progress(progress_placeholder)
 
 
+# ######################################################################################################
+
+st.markdown("## Leaderboard")
+tab_public, tab_private = st.tabs(["Public", "Private"])
+with tab_public:
+    st.text("hariom!!!!!!!")
+    leaderboard_placeholder = st.empty()
+
+with tab_private:
+    progress_placeholder = st.empty()
+
+# ##########################################
 # sanity check
 if "login" not in st.session_state:
     st.session_state.login = get_login()

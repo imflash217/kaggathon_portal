@@ -51,7 +51,7 @@ class SubmissionSidebar:
         )
         if st.sidebar.button("Submit 📮"):
             if submission_io_stream is None:
-                st.sidebar.error("Please upload a file.")
+                st.sidebar.error("❌ Please upload a file.")
             else:
                 submission_failed = True
                 with st.spinner("⏫ Validating & Uploading your submission..."):
@@ -66,7 +66,7 @@ class SubmissionSidebar:
                     st.sidebar.success("✅ Upload successful!")
 
     def run_submission(self):
-        st.sidebar.title(f"Hi {self.username}! Welcome 🙏 ")
+        st.sidebar.title(f"Hi `@{self.username}`! Welcome 🙏 ")
         if self.username != ADMIN_USERNAME:
             st.sidebar.markdown("## Submit Your Results ⤵️ ")
             self.submit()

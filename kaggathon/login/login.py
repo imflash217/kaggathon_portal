@@ -32,7 +32,8 @@ class Login:
         self.signout_button_placeholder = None
 
     def init(self):
-        st.sidebar.markdown("### Kaggathon `2024` `@TIAA`")
+        st.sidebar.title("Kaggathon `2024` `TIAA`")
+        # st.sidebar.markdown("### Kaggathon `2024` `@TIAA`")
         self.first_login_checkbox_placeholder = st.sidebar.empty()
         self.username_placeholder = st.sidebar.empty()
         self.pwd_placeholder = st.sidebar.empty()

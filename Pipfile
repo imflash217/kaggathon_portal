@@ -12,6 +12,7 @@ bokeh = ">=2.1.1"
 numpy = "*"
 scikit-learn = "*"
 isort = "*"
+watchdog = "*"
 
 [dev-packages]
 
