@@ -4,8 +4,7 @@ import pandas as pd
 import streamlit as st
 
 from kaggathon.config import ADMIN_USERNAME, SHOW_TOP_K_ONLY
-from kaggathon.submissions.submissions_manager import \
-    SingleParticipantSubmissions
+from kaggathon.submissions.submissions_manager import SingleParticipantSubmissions
 
 
 class Leaderboard:

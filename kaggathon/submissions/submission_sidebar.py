@@ -5,7 +5,9 @@ import streamlit as st
 
 from kaggathon.config import ADMIN_USERNAME
 from kaggathon.submissions.submissions_manager import (
-    SingleParticipantSubmissions, SubmissionManager)
+    SingleParticipantSubmissions,
+    SubmissionManager,
+)
 
 
 class SubmissionSidebar:

@@ -2,8 +2,7 @@ from typing import Optional
 
 import streamlit as st
 
-from kaggathon.login.username_password_manager import \
-    UsernamePasswordManagerArgon2
+from kaggathon.login.username_password_manager import UsernamePasswordManagerArgon2
 from kaggathon.utils import is_legal_filename
 
 

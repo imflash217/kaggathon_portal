@@ -1,4 +1,5 @@
 import pandas as pd
+
 # from bokeh.plotting import Figure
 import streamlit as st
 from bokeh.models import HoverTool
@@ -6,8 +7,7 @@ from bokeh.palettes import all_palettes
 from bokeh.plotting import figure
 
 from kaggathon.evaluation.evaluator import Evaluator
-from kaggathon.submissions.submissions_manager import \
-    SingleParticipantSubmissions
+from kaggathon.submissions.submissions_manager import SingleParticipantSubmissions
 
 
 class PersonalProgress:

@@ -3,6 +3,7 @@ import streamlit as st
 import requests
 from PIL import Image
 from io import BytesIO
+
 # import plotly.express as px
 
 # df = px.data.iris()
@@ -19,7 +20,9 @@ def get_img_as_base64(url):
     return img_str
 
 
-img = get_img_as_base64("https://sacredsites.com/images/asia/india/TN-Palani-Dhandayuthapani-Swamy-Temple-01-600.jpg")
+img = get_img_as_base64(
+    "https://sacredsites.com/images/asia/india/TN-Palani-Dhandayuthapani-Swamy-Temple-01-600.jpg"
+)
 
 
 page_bg_img = """

@@ -1,19 +1,25 @@
-import pathlib
-import sys
+# import pathlib
+# import sys
 
 import streamlit as st
 
-from kaggathon.config import (ADMIN_USERNAME, ARGON2_KWARGS, EVALUATOR_CLASS,
-                              EVALUATOR_KWARGS, MAX_NUM_USERS,
-                              PASSWORDS_DB_FILE, SUBMISSIONS_DIR,
-                              VALID_SUBMISSION_FILE_EXTENSION)
+from kaggathon.config import (
+    ADMIN_USERNAME,
+    ARGON2_KWARGS,
+    EVALUATOR_CLASS,
+    EVALUATOR_KWARGS,
+    MAX_NUM_USERS,
+    PASSWORDS_DB_FILE,
+    SUBMISSIONS_DIR,
+    VALID_SUBMISSION_FILE_EXTENSION,
+)
 from kaggathon.display.leaderboard import Leaderboard
 from kaggathon.display.personal_progress import PersonalProgress
 from kaggathon.login.login import Login
-from kaggathon.login.username_password_manager import \
-    UsernamePasswordManagerArgon2
+from kaggathon.login.username_password_manager import UsernamePasswordManagerArgon2
 from kaggathon.submissions.submission_sidebar import SubmissionSidebar
 from kaggathon.submissions.submissions_manager import SubmissionManager
+
 # import kaggathon.display.custom_css as cc
 
 
