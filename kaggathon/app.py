@@ -79,7 +79,6 @@ def display_user_progess_for_admin():
 st.markdown("## Leaderboard")
 tab_public, tab_private = st.tabs(["Public", "Private"])
 with tab_public:
-    st.text("hariom!!!!!!!")
     leaderboard_placeholder = st.empty()
 
 with tab_private:
