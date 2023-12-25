@@ -47,7 +47,6 @@ class Leaderboard:
             ],
             columns=["Participant Name", "Submission Time", *metric_names],
         )
-        print(leaderboard)
         leaderboard = leaderboard.sort_values(
             by=metric_names + ["Submission Time"],
             ascending=[False] * len(metric_names) + [True],
@@ -59,10 +58,11 @@ class Leaderboard:
         return leaderboard
 
     def display_leaderboard(self, username: str, leaderboard_placeholder=None):
+        # print(f"✅ {self.submission_manager.participants}, \n, {username}")
         leaderboard = self._get_sorted_leaderboard(
             self.submission_manager.participants, username
         )
         if leaderboard_placeholder is not None:
-            leaderboard_placeholder.table(leaderboard)
+            leaderboard_placeholder.dataframe(leaderboard, use_container_width=True)
         else:
-            st.table(leaderboard)
+            st.dataframe(leaderboard, use_container_width=True)

@@ -15,15 +15,9 @@ from kaggathon.login.username_password_manager import \
 from kaggathon.submissions.submission_sidebar import SubmissionSidebar
 from kaggathon.submissions.submissions_manager import SubmissionManager
 
+st.markdown("## Leaderboard")
 leaderboard_placeholder = st.empty()
 progress_placeholder = st.empty()
-# max_width_value = st.sidebar.slider(
-#     "Select max-width in px",
-#     100,
-#     2000,
-#     1200,
-#     100,
-# )
 
 
 def get_login():
@@ -88,6 +82,7 @@ if "login" not in st.session_state:
     st.session_state.login = get_login()
 login = st.session_state["login"]  # access the login object from session state
 login.init()  # initialize the login state
+
 
 if login.run_and_return_if_access_is_allowed() and not login.has_user_signed_out():
     username = login.get_username()

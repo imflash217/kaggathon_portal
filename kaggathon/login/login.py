@@ -32,6 +32,7 @@ class Login:
         self.signout_button_placeholder = None
 
     def init(self):
+        st.sidebar.markdown("### Kaggathon `2024` `@TIAA`")
         self.first_login_checkbox_placeholder = st.sidebar.empty()
         self.username_placeholder = st.sidebar.empty()
         self.pwd_placeholder = st.sidebar.empty()
@@ -137,7 +138,7 @@ class Login:
     def has_user_signed_out(self) -> bool:
         if not self.session_state.is_logged_in:
             return False
-        if self.signout_button_placeholder.button("Sign out"):
+        if self.signout_button_placeholder.button("Sign out 👋"):
             self.session_state.username = ""
             self.session_state.is_logged_in = False
             self.clear_placeholders()

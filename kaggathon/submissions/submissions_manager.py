@@ -80,7 +80,7 @@ class SingleParticipantSubmissions:
         if not self.results:
             return None
         else:
-            max(
+            return max(
                 [(path, result) for path, result in self.results.items()],
                 key=lambda x: x[1],
             )

@@ -19,7 +19,7 @@ MAX_NUM_USERS = None
 # if None, any file extension is allowed.
 VALID_SUBMISSION_FILE_EXTENSION = "json"
 
-SHOW_TOP_K_ONLY = 10
+SHOW_TOP_K_ONLY = 5
 ADMIN_USERNAME = "admin"
 
 # evaluation criteria and metrics
