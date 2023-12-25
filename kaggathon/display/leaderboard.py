@@ -14,14 +14,14 @@ class Leaderboard:
         self.evaluator = evaluator
         self.id = None
 
-    @st.cache_data(
-        hash_funcs={
-            SingleParticipantSubmissions: lambda x: x.submissions_hash(),
-            "kaggathon.display.leaderboard.Leaderboard": lambda x: hash(x.id),
-            },
-        show_spinner=False,
-        persist=True,
-    )
+    # @st.cache_data(
+    #     hash_funcs={
+    #         SingleParticipantSubmissions: lambda x: x.submissions_hash(),
+    #         "kaggathon.display.leaderboard.Leaderboard": lambda x: hash(x.id),
+    #         },
+    #     show_spinner=False,
+    #     persist=True,
+    # )
     def _get_sorted_leaderboard(
         self,
         participants_dict: Dict[str, SingleParticipantSubmissions],

@@ -23,13 +23,13 @@ def get_login():
 
 
 # @st.cache(allow_output_mutation=True)
-@st.cache_data(persist=True)
+# @st.cache_data(persist=True)
 def get_submissions_manager():
     return SubmissionManager(SUBMISSIONS_DIR)
 
 
 # @st.cache(allow_output_mutation=True)
-@st.cache_data(persist=True)
+# @st.cache_data(persist=True)
 def get_submission_sidebar(username: str):
     return SubmissionSidebar(
         username,
@@ -40,18 +40,18 @@ def get_submission_sidebar(username: str):
 
 
 # @st.cache(allow_output_mutation=True)
-@st.cache_data(persist=True)
+# @st.cache_data(persist=True)
 def get_evaluator():
     return EVALUATOR_CLASS(**EVALUATOR_KWARGS)
 
 
 # @st.cache(allow_output_mutation=True)
-@st.cache_data(persist=True)
+# @st.cache_data(persist=True)
 def get_leaderboard():
     return Leaderboard(get_submissions_manager(), get_evaluator())
 
 
-@st.cache_data(persist=True)
+# @st.cache_data(persist=True)
 def get_users_without_admin():
     return [
         user
@@ -61,7 +61,7 @@ def get_users_without_admin():
 
 
 # @st.cache(allow_output_mutation=True)
-@st.cache_data(persist=True)
+# @st.cache_data(persist=True)
 def get_personal_progress(username: str):
     return PersonalProgress(
         get_submissions_manager().get_participant(username), get_evaluator()
